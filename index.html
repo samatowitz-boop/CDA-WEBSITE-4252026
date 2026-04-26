@@ -6,7 +6,7 @@
   <title>Chattanooga Discount Appliances | Fort Oglethorpe, GA</title>
   <meta
     name="description"
-    content="Chattanooga Discount Appliances in Fort Oglethorpe, GA. Quality appliances, discount prices, financing, delivery, setup, and haul-away available."
+    content="Chattanooga Discount Appliances in Fort Oglethorpe, GA. Quality appliances, discount prices, no credit check financing, delivery, setup, haul-away, mattresses, and appliance buying available."
   />
 
   <style>
@@ -14,6 +14,7 @@
       --blue: #1e73be;
       --blue-dark: #11497e;
       --accent: #f9b233;
+      --accent-dark: #d88900;
       --light: #f5f5f5;
       --dark: #1b1b1b;
       --card-radius: 14px;
@@ -121,24 +122,85 @@
       border-color: var(--blue);
     }
 
-   .hero-banner{
-  width:100%;
-  background:#ffffff;
-  display:flex;
-  justify-content:center;
-  padding:10px 0;
-}
+    .hero-banner {
+      width: 100%;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
 
-.hero-banner-inner{
-  width:100%;
-  max-width:1200px;
-}
+    .hero-banner-inner {
+      width: 100%;
+      max-width: 1200px;
+    }
 
-.hero-banner img{
-  width:100%;
-  height:auto;
-  display:block;
-}
+    .hero-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .promo-strip {
+      background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+      color: #fff;
+      padding: 26px 20px;
+      text-align: center;
+    }
+
+    .promo-strip h1 {
+      margin: 0 0 8px;
+      font-size: 34px;
+      line-height: 1.15;
+      text-transform: uppercase;
+    }
+
+    .promo-strip p {
+      margin: 4px 0;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    .promo-actions {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-weight: bold;
+      font-size: 14px;
+      text-align: center;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-blue {
+      background: var(--blue);
+      color: #fff;
+      border: 1px solid var(--blue);
+    }
+
+    .btn-outline {
+      background: #fff;
+      color: var(--blue-dark);
+      border: 1px solid #d9e2ef;
+    }
+
+    .btn-yellow {
+      background: var(--accent);
+      color: #1b1b1b;
+      border: 1px solid var(--accent-dark);
+    }
 
     section {
       max-width: var(--max-width);
@@ -183,7 +245,7 @@
       max-width: 1000px;
       margin: 14px auto 0;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 10px;
     }
 
@@ -355,6 +417,10 @@
         align-items: flex-start;
       }
 
+      .promo-strip h1 {
+        font-size: 26px;
+      }
+
       .gallery-img {
         height: 220px;
       }
@@ -379,7 +445,9 @@
   <div class="top-bar">
     📍 1931 Lafayette Rd, Fort Oglethorpe GA
     <span>|</span>
-    📞 Call or Text: <a href="tel:4234070098">423-407-0098</a>
+    📞 Call or Text: <a href="tel:+14234070098">423-407-0098</a>
+    <span>|</span>
+    💰 We Buy Appliances – Text Photos for Appraisal
     <span>|</span>
     Mon–Fri 10am-5pm • Sat 9am-3pm • Closed Sunday
   </div>
@@ -397,39 +465,57 @@
       <a href="#showroom">Showroom</a>
       <a href="#appliances">Appliances</a>
       <a href="#sets">Laundry Sets</a>
+      <a href="#mattresses">Mattresses</a>
       <a href="#why-us">Why Us</a>
       <a href="#property-managers">Property Managers</a>
       <a href="#financing">Financing</a>
       <a href="#delivery">Delivery</a>
+      <a href="#sell-appliance">Sell Your Appliance</a>
       <a href="#contact">Contact</a>
       <a href="#sms-policy">SMS Policy</a>
       <a href="/sms-policy.html" target="_blank" rel="noopener noreferrer">Open SMS Page</a>
     </nav>
   </header>
 
-<section class="hero-banner">
-  <div class="hero-banner-inner">
-    <img src="/images/cda-banner.png" alt="Chattanooga Discount Appliances Banner">
+  <section class="hero-banner">
+    <div class="hero-banner-inner">
+      <img src="/images/cda-banner.png" alt="Chattanooga Discount Appliances Banner">
+    </div>
+  </section>
+
+  <div class="promo-strip">
+    <h1>$0 Down – Take It Home Today</h1>
+    <p>No Credit Check Financing Available</p>
+    <p>10 Minute Application Process • Appliances Starting at $199</p>
+    <div class="promo-actions">
+      <a
+        href="https://americanfirstfinance.com/app/?dealer=31865&loc=1&src=UA"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-yellow"
+      >Apply Online Now</a>
+      <a href="tel:+14234070098" class="btn btn-outline">Call or Text 423-407-0098</a>
+    </div>
   </div>
-</section>
 
   <div class="showroom-wrap">
     <section id="showroom">
       <h2>Inside Our Showroom</h2>
-      <p class="subtitle">Local deals, no credit check financing, delivery, setup, and warranty coverage.</p>
+      <p class="subtitle">Local deals, no credit check financing, delivery, setup, haul-away, warranty coverage, and new mattresses available.</p>
 
       <div class="banner-actions">
         <a href="tel:+14234070098">📞 Call or Text</a>
         <a href="https://www.google.com/maps/search/?api=1&query=1931+Lafayette+Rd+Fort+Oglethorpe+GA+30742" target="_blank" rel="noopener">📍 Get Directions</a>
         <a href="#appliances">🛒 View Inventory</a>
         <a href="#financing">💳 Apply for Financing</a>
+        <a href="#sell-appliance">💰 Sell Your Appliance</a>
       </div>
 
       <div class="feature-strip">
+        <div class="feature-pill">✔ $0 Down Options</div>
         <div class="feature-pill">✔ No Credit Check Financing</div>
         <div class="feature-pill">✔ 90-Day Warranty</div>
         <div class="feature-pill">✔ Delivery & Setup</div>
-        <div class="feature-pill">✔ Haul Away Available</div>
       </div>
     </section>
   </div>
@@ -490,6 +576,17 @@
         <div class="card-title">Stackable Laundry Center</div>
         <p>Great for apartments, closets, and tight spaces.</p>
       </div>
+    </div>
+  </section>
+
+  <section id="mattresses">
+    <h2>New Mattresses Available</h2>
+    <p class="subtitle">Brand-new mattresses available at huge savings.</p>
+
+    <div class="highlight" style="text-align:center;">
+      <h3>🛏 New Mattresses – 50% Off Retail</h3>
+      <p>Ask us about available sizes and current mattress inventory while shopping for appliances.</p>
+      <p><strong>Call or text 423-407-0098</strong> for today’s availability.</p>
     </div>
   </section>
 
@@ -563,9 +660,11 @@
 
     <div class="two-col">
       <div class="highlight">
-        <h3>No-Credit-Check Financing</h3>
+        <h3>$0 Down No-Credit-Check Financing</h3>
         <ul>
-          <li>Easy approval process.</li>
+          <li>$0 down options available.</li>
+          <li>No credit check financing available.</li>
+          <li>10 minute application process.</li>
           <li>Great for full kitchen packages, washer/dryer sets, and more.</li>
           <li>Apply online in minutes with American First Finance.</li>
         </ul>
@@ -576,7 +675,7 @@
             rel="noopener noreferrer"
             class="btn btn-blue"
           >
-            Apply Now – No Credit Check
+            Apply Online – 10 Minute Application
           </a>
         </p>
       </div>
@@ -595,7 +694,7 @@
             rel="noopener noreferrer"
             class="btn btn-outline"
           >
-            Apply for Financing
+            Apply for Standard Financing
           </a>
         </p>
       </div>
@@ -628,6 +727,33 @@
     </div>
   </section>
 
+  <section id="sell-appliance">
+    <h2>We Buy Appliances</h2>
+    <p class="subtitle">Turn your used appliances into cash or trade-in value.</p>
+
+    <div class="highlight">
+      <h3 style="margin-top:0;">💰 Sell or Trade Your Appliance</h3>
+      <ul>
+        <li>We buy washers, dryers, refrigerators, and more.</li>
+        <li>Quick and easy appraisal process.</li>
+        <li>Trade-in options may be available when upgrading.</li>
+        <li>Pickup may be available depending on location and appliance condition.</li>
+      </ul>
+
+      <p style="text-align:center; margin-top:15px;">
+        📸 <strong>Text photos to 423-407-0098 for a fast appraisal!</strong>
+      </p>
+
+      <p style="text-align:center; font-size:13px; color:#555;">
+        Include basic details like appliance type, brand, condition, age if known, and pickup location for the fastest response.
+      </p>
+
+      <p style="text-align:center; margin-top:12px;">
+        <a href="sms:+14234070098" class="btn btn-blue">Text Photos for Appraisal</a>
+      </p>
+    </div>
+  </section>
+
   <section id="contact">
     <h2>Visit or Contact Us</h2>
     <p class="subtitle">Call, text, or stop by — we’re happy to help you find the right appliance.</p>
@@ -638,7 +764,6 @@
       Fort Oglethorpe, GA 30742<br /><br />
 
       <strong>Call or Text:</strong> <a href="tel:+14234070098">423-407-0098</a><br />
-      <strong>Secondary Phone:</strong> <a href="tel:+14237796313">423-779-6313</a><br />
       <strong>Email:</strong>
       <a href="mailto:Sales@ChattanoogaDiscountAppliances.com">Sales@ChattanoogaDiscountAppliances.com</a>
 
@@ -687,6 +812,7 @@
             <option value="delivery-updates">Delivery Updates</option>
             <option value="customer-care">Customer Care</option>
             <option value="inventory-questions">Inventory Questions</option>
+            <option value="appliance-appraisal">Appliance Appraisal</option>
           </select>
         </p>
 
