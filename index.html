@@ -9,6 +9,15 @@
     content="Chattanooga Discount Appliances in Fort Oglethorpe, GA. Quality appliances, discount prices, no credit check financing, delivery, setup, haul-away, mattresses, and appliance buying available."
   />
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-597Q1JS0GR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-597Q1JS0GR');
+  </script>
+
   <style>
     :root {
       --blue: #1e73be;
@@ -445,7 +454,7 @@
   <div class="top-bar">
     📍 1931 Lafayette Rd, Fort Oglethorpe GA
     <span>|</span>
-    📞 Call or Text: <a href="tel:+14234070098">423-407-0098</a>
+    📞 Call or Text: <a href="tel:+14234070098" onclick="gtag('event', 'call_click', { 'event_category': 'contact', 'event_label': 'Top Bar Phone' });">423-407-0098</a>
     <span>|</span>
     💰 We Buy Appliances – Text Photos for Appraisal
     <span>|</span>
@@ -493,8 +502,13 @@
         target="_blank"
         rel="noopener noreferrer"
         class="btn btn-yellow"
+        onclick="gtag('event', 'apply_click', { 'event_category': 'financing', 'event_label': 'Top Promo Apply Online' });"
       >Apply Online Now</a>
-      <a href="tel:+14234070098" class="btn btn-outline">Call or Text 423-407-0098</a>
+      <a
+        href="tel:+14234070098"
+        class="btn btn-outline"
+        onclick="gtag('event', 'call_click', { 'event_category': 'contact', 'event_label': 'Top Promo Call' });"
+      >Call or Text 423-407-0098</a>
     </div>
   </div>
 
@@ -504,11 +518,11 @@
       <p class="subtitle">Local deals, no credit check financing, delivery, setup, haul-away, warranty coverage, and new mattresses available.</p>
 
       <div class="banner-actions">
-        <a href="tel:+14234070098">📞 Call or Text</a>
-        <a href="https://www.google.com/maps/search/?api=1&query=1931+Lafayette+Rd+Fort+Oglethorpe+GA+30742" target="_blank" rel="noopener">📍 Get Directions</a>
+        <a href="tel:+14234070098" onclick="gtag('event', 'call_click', { 'event_category': 'contact', 'event_label': 'Showroom Call' });">📞 Call or Text</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=1931+Lafayette+Rd+Fort+Oglethorpe+GA+30742" target="_blank" rel="noopener" onclick="gtag('event', 'directions_click', { 'event_category': 'location', 'event_label': 'Showroom Directions' });">📍 Get Directions</a>
         <a href="#appliances">🛒 View Inventory</a>
-        <a href="#financing">💳 Apply for Financing</a>
-        <a href="#sell-appliance">💰 Sell Your Appliance</a>
+        <a href="#financing" onclick="gtag('event', 'financing_section_click', { 'event_category': 'navigation', 'event_label': 'Showroom Financing Button' });">💳 Apply for Financing</a>
+        <a href="#sell-appliance" onclick="gtag('event', 'sell_appliance_nav_click', { 'event_category': 'lead', 'event_label': 'Showroom Sell Appliance Button' });">💰 Sell Your Appliance</a>
       </div>
 
       <div class="feature-strip">
@@ -674,6 +688,7 @@
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn-blue"
+            onclick="gtag('event', 'apply_click', { 'event_category': 'financing', 'event_label': 'Financing Section American First Finance' });"
           >
             Apply Online – 10 Minute Application
           </a>
@@ -693,6 +708,7 @@
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn-outline"
+            onclick="gtag('event', 'standard_financing_click', { 'event_category': 'financing', 'event_label': 'Intuit Financing' });"
           >
             Apply for Standard Financing
           </a>
@@ -749,7 +765,11 @@
       </p>
 
       <p style="text-align:center; margin-top:12px;">
-        <a href="sms:+14234070098" class="btn btn-blue">Text Photos for Appraisal</a>
+        <a
+          href="sms:+14234070098"
+          class="btn btn-blue"
+          onclick="gtag('event', 'sell_appliance_click', { 'event_category': 'lead', 'event_label': 'Text Photos Appraisal' });"
+        >Text Photos for Appraisal</a>
       </p>
     </div>
   </section>
@@ -763,9 +783,9 @@
       1931 Lafayette Rd<br />
       Fort Oglethorpe, GA 30742<br /><br />
 
-      <strong>Call or Text:</strong> <a href="tel:+14234070098">423-407-0098</a><br />
+      <strong>Call or Text:</strong> <a href="tel:+14234070098" onclick="gtag('event', 'call_click', { 'event_category': 'contact', 'event_label': 'Contact Section Phone' });">423-407-0098</a><br />
       <strong>Email:</strong>
-      <a href="mailto:Sales@ChattanoogaDiscountAppliances.com">Sales@ChattanoogaDiscountAppliances.com</a>
+      <a href="mailto:Sales@ChattanoogaDiscountAppliances.com" onclick="gtag('event', 'email_click', { 'event_category': 'contact', 'event_label': 'Sales Email' });">Sales@ChattanoogaDiscountAppliances.com</a>
 
       <div class="hours">
         <br /><strong>Store Hours</strong><br />
@@ -779,6 +799,7 @@
           href="https://www.google.com/maps/search/?api=1&query=1931+Lafayette+Rd+Fort+Oglethorpe+GA+30742"
           target="_blank"
           rel="noopener"
+          onclick="gtag('event', 'directions_click', { 'event_category': 'location', 'event_label': 'Contact Section Maps' });"
         >
           📍 Open in Google Maps
         </a>
@@ -794,7 +815,7 @@
         HELP for help.
       </p>
 
-      <form name="sms-opt-in" method="POST">
+      <form name="sms-opt-in" method="POST" onsubmit="gtag('event', 'sms_optin_submit', { 'event_category': 'lead', 'event_label': 'SMS Opt-In Form' });">
         <p style="margin-bottom: 12px;">
           <label for="sms-name"><strong>Name</strong></label><br />
           <input type="text" id="sms-name" name="name" required class="form-input" />
@@ -855,7 +876,7 @@
 
   <footer>
     © 2026 Chattanooga Discount Appliances • 1931 Lafayette Rd, Fort Oglethorpe, GA 30742 •
-    <a href="tel:+14234070098">423-407-0098</a>
+    <a href="tel:+14234070098" onclick="gtag('event', 'call_click', { 'event_category': 'contact', 'event_label': 'Footer Phone' });">423-407-0098</a>
   </footer>
 </body>
 </html>
