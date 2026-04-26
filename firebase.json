@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "site": "cda-prod-2026",
+    "public": "public",
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
