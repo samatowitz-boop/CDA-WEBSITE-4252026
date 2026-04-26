@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chattanooga Discount Appliances | Fort Oglethorpe, GA</title>
+  <meta
+    name="description"
+    content="Chattanooga Discount Appliances in Fort Oglethorpe, GA. Quality appliances, discount prices, no credit check financing, delivery, setup, haul-away, mattresses, and appliance buying available."
+  />
+
+  <style>
+    :root {
+      --blue: #1e73be;
+      --blue-dark: #11497e;
+      --accent: #f9b233;
+      --accent-dark: #d88900;
+      --light: #f5f5f5;
+      --dark: #1b1b1b;
+      --card-radius: 14px;
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--light);
+      color: #222;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .top-bar {
+      background: var(--blue-dark);
+      color: #fff;
+      text-align: center;
+      font-size: 13px;
+      padding: 8px 10px;
+      line-height: 1.5;
+    }
+
+    .top-bar a {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .top-bar span {
+      margin: 0 10px;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 2px solid #ddd;
+      padding: 12px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-wrap img {
+      height: 64px;
+      width: auto;
+    }
+
+    .brand-text {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .brand-text small {
+      display: block;
+      font-size: 12px;
+      font-weight: normal;
+      color: #555;
+      margin-top: 2px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    nav a {
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+    }
+
+    nav a:hover {
+      border-color: var(--blue);
+    }
+
+    .hero-banner {
+      width: 100%;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    .hero-banner-inner {
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .hero-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .promo-strip {
+      background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+      color: #fff;
+      padding: 26px 20px;
+      text-align: center;
+    }
+
+    .promo-strip h1 {
+      margin: 0 0 8px;
+      font-size: 34px;
+      line-height: 1.15;
+      text-transform: uppercase;
+    }
+
+    .promo-strip p {
+      margin: 4px 0;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    .promo-actions {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-weight: bold;
+      font-size: 14px;
+      text-align: center;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-blue {
+      background: var(--blue);
+      color: #fff;
+      border: 1px solid var(--blue);
+    }
+
+    .btn-outline {
+      background: #fff;
+      color: var(--blue-dark);
+      border: 1px solid #d9e2ef;
+    }
+
+    .btn-yellow {
+      background: var(--accent);
+      color: #1b1b1b;
+      border: 1px solid var(--accent-dark);
+    }
+
+    section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 38px 20px;
+    }
+
+    section h2 {
+      margin: 0 0 8px;
+      text-align: center;
+      color: var(--blue);
+      font-size: 28px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .showroom-wrap {
+      background: #fff;
+      border-top: 1px solid #e8e8e8;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .showroom-wrap section {
+      padding: 28px 20px 34px;
+    }
+
+    .showroom-wrap h2 {
+      margin-bottom: 6px;
+    }
+
+    .showroom-wrap .subtitle {
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    .banner-actions {
+      max-width: 1000px;
+      margin: 14px auto 0;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+
+    .banner-actions a {
+      background: #fff;
+      border: 1px solid #d9e2ef;
+      color: var(--blue-dark);
+      border-radius: 12px;
+      padding: 12px 10px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 14px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .banner-actions a:hover {
+      background: #f7fbff;
+    }
+
+    .feature-strip {
+      max-width: 1000px;
+      margin: 14px auto 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .feature-pill {
+      background: #f7fbff;
+      border: 1px solid #d7e6f7;
+      color: var(--blue-dark);
+      border-radius: 999px;
+      text-align: center;
+      padding: 10px 12px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card,
+    .highlight {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: var(--card-radius);
+      padding: 18px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .card p,
+    .highlight p,
+    .highlight li {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .highlight h3 {
+      margin-top: 0;
+      color: var(--blue);
+      font-size: 18px;
+    }
+
+    .highlight ul {
+      margin: 8px 0;
+      padding-left: 20px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background: #f0f4fb;
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+      background: #f2f2f2;
+    }
+
+    .location-map-wrap {
+      background: #f5f5f5;
+    }
+
+    .map-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .contact-details {
+      text-align: center;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .hours {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .form-input,
+    .form-select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font: inherit;
+    }
+
+    footer {
+      background: var(--dark);
+      color: #eee;
+      text-align: center;
+      padding: 18px 20px;
+      font-size: 13px;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #eee;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      .two-col,
+      .banner-actions,
+      .feature-strip {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .promo-strip h1 {
+        font-size: 26px;
+      }
+
+      .gallery-img {
+        height: 220px;
+      }
+
+      .top-bar span {
+        display: inline-block;
+        margin: 0 6px;
+      }
+
+      .showroom-wrap section {
+        padding: 24px 14px 28px;
+      }
+
+      .banner-actions,
+      .feature-strip {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    📍 1931 Lafayette Rd, Fort Oglethorpe GA
+    <span>|</span>
+    📞 Call or Text: <a href="tel:+14234070098">423-407-0098</a>
+    <span>|</span>
+    💰 We Buy Appliances – Text Photos for Appraisal
+    <span>|</span>
+    Mon–Fri 10am-5pm • Sat 9am-3pm • Closed Sunday
+  </div>
+
+  <header>
+    <div class="logo-wrap">
+      <img src="cda-logo.png.webp" alt="Chattanooga Discount Appliances Logo" />
+      <div class="brand-text">
+        Chattanooga Discount Appliances
+        <small>1931 Lafayette Rd • Fort Oglethorpe, GA 30742</small>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#showroom">Showroom</a>
+      <a href="#appliances">Appliances</a>
+      <a href="#sets">Laundry Sets</a>
+      <a href="#mattresses">Mattresses</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#property-managers">Property Managers</a>
+      <a href="#financing">Financing</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#sell-appliance">Sell Your Appliance</a>
+      <a href="#contact">Contact</a>
+      <a href="#sms-policy">SMS Policy</a>
+      <a href="/sms-policy.html" target="_blank" rel="noopener noreferrer">Open SMS Page</a>
+    </nav>
+  </header>
+
+  <section class="hero-banner">
+    <div class="hero-banner-inner">
+      <img src="/images/cda-banner.png" alt="Chattanooga Discount Appliances Banner">
+    </div>
+  </section>
+
+  <div class="promo-strip">
+    <h1>$0 Down – Take It Home Today</h1>
+    <p>No Credit Check Financing Available</p>
+    <p>10 Minute Application Process • Appliances Starting at $199</p>
+    <div class="promo-actions">
+      <a
+        href="https://americanfirstfinance.com/app/?dealer=31865&loc=1&src=UA"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-yellow"
+      >Apply Online Now</a>
+      <a href="tel:+14234070098" class="btn btn-outline">Call or Text 423-407-0098</a>
+    </div>
+  </div>
+
+  <div class="showroom-wrap">
+    <section id="showroom">
+      <h2>Inside Our Showroom</h2>
+      <p class="subtitle">Local deals, no credit check financing, delivery, setup, haul-away, warranty coverage, and new mattresses available.</p>
+
+      <div class="banner-actions">
+        <a href="tel:+14234070098">📞 Call or Text</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=1931+Lafayette+Rd+Fort+Oglethorpe+GA+30742" target="_blank" rel="noopener">📍 Get Directions</a>
+        <a href="#appliances">🛒 View Inventory</a>
+        <a href="#financing">💳 Apply for Financing</a>
+        <a href="#sell-appliance">💰 Sell Your Appliance</a>
+      </div>
+
+      <div class="feature-strip">
+        <div class="feature-pill">✔ $0 Down Options</div>
+        <div class="feature-pill">✔ No Credit Check Financing</div>
+        <div class="feature-pill">✔ 90-Day Warranty</div>
+        <div class="feature-pill">✔ Delivery & Setup</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="location-map-wrap">
+    <section>
+      <h2>Find Chattanooga Discount Appliances</h2>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps?q=1931+Lafayette+Rd+Fort+Oglethorpe+GA+30742&output=embed"
+          width="100%"
+          height="420"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+  </div>
+
+  <section id="appliances">
+    <h2>Shop Appliances</h2>
+    <p class="subtitle">Inventory changes daily — stop by or call for today’s best deals.</p>
+
+    <div class="grid">
+      <div class="card"><div class="card-title">Washers</div><p>Top-load and front-load units for every budget.</p></div>
+      <div class="card"><div class="card-title">Dryers</div><p>Electric dryers with tested heat and performance.</p></div>
+      <div class="card"><div class="card-title">Stackable Combo / Washer & Dryer</div><p>Space-saving laundry units for tighter areas.</p></div>
+      <div class="card"><div class="card-title">Refrigerators</div><p>Top-freezer, bottom-freezer, and side-by-side fridges.</p></div>
+      <div class="card"><div class="card-title">Freezers</div><p>Chest and upright freezers to keep everything ice cold.</p></div>
+      <div class="card"><div class="card-title">Stoves & Ranges</div><p>Electric ranges and glass-top stoves ready for your kitchen.</p></div>
+      <div class="card"><div class="card-title">Dishwashers</div><p>Clean, tested dishwashers to make life easier.</p></div>
+      <div class="card"><div class="card-title">Microwaves</div><p>Over-the-range units to finish out your kitchen.</p></div>
+      <div class="card"><div class="card-title">Kitchen Packages</div><p>Bundle multiple appliances and save on your upgrade.</p></div>
+      <div class="card"><div class="card-title">Washer & Dryer Sets</div><p>Matched sets ready for pickup or delivery.</p></div>
+    </div>
+  </section>
+
+  <section id="sets">
+    <h2>Washer & Dryer Sets</h2>
+    <p class="subtitle">Matched sets ready for same-day pickup or delivery.</p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="/images/washer-dryer-sets/set1.jpg" alt="Washer and Dryer Set 1" class="gallery-img" loading="lazy" decoding="async" />
+        <div class="card-title">Washer & Dryer Set #1</div>
+        <p>Clean, tested set at a great price.</p>
+      </div>
+
+      <div class="card">
+        <img src="/images/washer-dryer-sets/set2.jpg" alt="Washer and Dryer Set 2" class="gallery-img" loading="lazy" decoding="async" />
+        <div class="card-title">Washer & Dryer Set #2</div>
+        <p>Perfect everyday laundry combo for most homes.</p>
+      </div>
+
+      <div class="card">
+        <img src="/images/washer-dryer-sets/stacked.jpg" alt="Stackable Washer and Dryer" class="gallery-img" loading="lazy" decoding="async" />
+        <div class="card-title">Stackable Laundry Center</div>
+        <p>Great for apartments, closets, and tight spaces.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="mattresses">
+    <h2>New Mattresses Available</h2>
+    <p class="subtitle">Brand-new mattresses available at huge savings.</p>
+
+    <div class="highlight" style="text-align:center;">
+      <h3>🛏 New Mattresses – 50% Off Retail</h3>
+      <p>Ask us about available sizes and current mattress inventory while shopping for appliances.</p>
+      <p><strong>Call or text 423-407-0098</strong> for today’s availability.</p>
+    </div>
+  </section>
+
+  <section id="why-us">
+    <h2>Why Chattanooga Discount Appliances?</h2>
+    <p class="subtitle">We’re local, straightforward, and focused on getting you taken care of fast.</p>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-title">Local & Family-Focused</div>
+        <p>We live and work right here in the Chattanooga / North Georgia area. No big-box nonsense.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Cleaned & Tested</div>
+        <p>Units are checked, cleaned, and tested so you know what you’re getting.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">90-Day Warranty</div>
+        <p>Flexible 90-day warranty on most used appliances with real people you can call or text.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Delivery, Setup & Haul-Away</div>
+        <p>We can deliver, install, and haul away your old unit starting at just <strong>$89</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="property-managers">
+    <h2>Property Manager & Landlord Programs</h2>
+    <p class="subtitle">Fast turnaround, simple pricing, and reliable appliances for rentals.</p>
+
+    <div class="two-col">
+      <div class="highlight">
+        <h3>Standard White / Black / Bisque Pricing</h3>
+        <table>
+          <tr>
+            <th>Appliance Type</th>
+            <th>Standard Pricing</th>
+          </tr>
+          <tr><td>Top & Bottom Refrigerators</td><td>$299.99</td></tr>
+          <tr><td>Washers</td><td>$199.00</td></tr>
+          <tr><td>Dryers</td><td>$199.00</td></tr>
+          <tr><td>Microwaves</td><td>$199.00</td></tr>
+          <tr><td>Dishwashers</td><td>$199.00</td></tr>
+          <tr><td>Side-by-Side Refrigerators</td><td>$399.00</td></tr>
+        </table>
+        <p style="font-size: 13px; margin-top: 8px;">Stainless pricing varies by piece.</p>
+      </div>
+
+      <div class="highlight">
+        <h3>Turnkey Service</h3>
+        <ul>
+          <li>Bulk appliance purchases for multi-unit properties.</li>
+          <li>Delivery & setup available starting at <strong>$89</strong>.</li>
+          <li>90-day warranty with flexible solutions if issues arise.</li>
+          <li>Great option for landlords, flippers, and property managers.</li>
+        </ul>
+        <p style="font-size: 13px;">
+          Call or text <strong>423-407-0098</strong> to discuss volume needs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="financing">
+    <h2>Financing & Payment Options</h2>
+    <p class="subtitle">Need a little help getting the appliances you want today? We’ve got options.</p>
+
+    <div class="two-col">
+      <div class="highlight">
+        <h3>$0 Down No-Credit-Check Financing</h3>
+        <ul>
+          <li>$0 down options available.</li>
+          <li>No credit check financing available.</li>
+          <li>10 minute application process.</li>
+          <li>Great for full kitchen packages, washer/dryer sets, and more.</li>
+          <li>Apply online in minutes with American First Finance.</li>
+        </ul>
+        <p style="text-align: center; margin-top: 12px;">
+          <a
+            href="https://americanfirstfinance.com/app/?dealer=31865&loc=1&src=UA"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-blue"
+          >
+            Apply Online – 10 Minute Application
+          </a>
+        </p>
+      </div>
+
+      <div class="highlight">
+        <h3>Standard Financing (Intuit)</h3>
+        <ul>
+          <li>Flexible financing for qualifying customers.</li>
+          <li>Ideal for larger purchases or full remodel projects.</li>
+          <li>Review terms and submit your application online.</li>
+        </ul>
+        <p style="text-align: center; margin-top: 12px;">
+          <a
+            href="https://financing.app.intuit.com/home?token=Y29tcGFueUlkPTkzNDE0NTU0MDMwNzM0NjQ="
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline"
+          >
+            Apply for Standard Financing
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="highlight" style="margin-top: 20px;">
+      <h3>Credit & Payment Methods</h3>
+      <ul>
+        <li>Major credit cards accepted <strong>with a 4% fee</strong>.</li>
+        <li>Cash and debit also accepted.</li>
+        <li>Simple pricing — no hidden nonsense.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="delivery">
+    <h2>Delivery, Setup & Haul-Away</h2>
+    <p class="subtitle">Let our team handle the heavy lifting so you don’t have to.</p>
+
+    <div class="highlight">
+      <h3 style="margin-top: 0;">How It Works</h3>
+      <ul>
+        <li><strong>$89</strong> for delivery, basic setup, and haul-away of the old unit.</li>
+        <li>We’ll schedule a delivery window and keep you updated.</li>
+        <li>Ask about multi-piece delivery options for full kitchen or laundry packages.</li>
+      </ul>
+      <p style="font-size: 13px;">
+        Service area, stairs, or special installs may affect final delivery pricing.
+      </p>
+    </div>
+  </section>
+
+  <section id="sell-appliance">
+    <h2>We Buy Appliances</h2>
+    <p class="subtitle">Turn your used appliances into cash or trade-in value.</p>
+
+    <div class="highlight">
+      <h3 style="margin-top:0;">💰 Sell or Trade Your Appliance</h3>
+      <ul>
+        <li>We buy washers, dryers, refrigerators, and more.</li>
+        <li>Quick and easy appraisal process.</li>
+        <li>Trade-in options may be available when upgrading.</li>
+        <li>Pickup may be available depending on location and appliance condition.</li>
+      </ul>
+
+      <p style="text-align:center; margin-top:15px;">
+        📸 <strong>Text photos to 423-407-0098 for a fast appraisal!</strong>
+      </p>
+
+      <p style="text-align:center; font-size:13px; color:#555;">
+        Include basic details like appliance type, brand, condition, age if known, and pickup location for the fastest response.
+      </p>
+
+      <p style="text-align:center; margin-top:12px;">
+        <a href="sms:+14234070098" class="btn btn-blue">Text Photos for Appraisal</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Visit or Contact Us</h2>
+    <p class="subtitle">Call, text, or stop by — we’re happy to help you find the right appliance.</p>
+
+    <div class="contact-details">
+      <strong>Chattanooga Discount Appliances</strong><br />
+      1931 Lafayette Rd<br />
+      Fort Oglethorpe, GA 30742<br /><br />
+
+      <strong>Call or Text:</strong> <a href="tel:+14234070098">423-407-0098</a><br />
+      <strong>Email:</strong>
+      <a href="mailto:Sales@ChattanoogaDiscountAppliances.com">Sales@ChattanoogaDiscountAppliances.com</a>
+
+      <div class="hours">
+        <br /><strong>Store Hours</strong><br />
+        Monday–Friday: 10:00am – 5:00pm<br />
+        Saturday: 9:00am – 3:00pm<br />
+        Sunday: Closed
+      </div>
+
+      <p style="margin-top: 10px;">
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=1931+Lafayette+Rd+Fort+Oglethorpe+GA+30742"
+          target="_blank"
+          rel="noopener"
+        >
+          📍 Open in Google Maps
+        </a>
+      </p>
+    </div>
+
+    <div class="highlight" style="margin-top: 20px; text-align: left;">
+      <h3 style="margin-top: 0; color: var(--blue);">SMS Updates Opt-In</h3>
+      <p>
+        By submitting this form and checking the box below, you agree to receive
+        customer care and order update text messages from Chattanooga Discount Appliances.
+        Message frequency varies. Message and data rates may apply. Reply STOP to opt out,
+        HELP for help.
+      </p>
+
+      <form name="sms-opt-in" method="POST">
+        <p style="margin-bottom: 12px;">
+          <label for="sms-name"><strong>Name</strong></label><br />
+          <input type="text" id="sms-name" name="name" required class="form-input" />
+        </p>
+
+        <p style="margin-bottom: 12px;">
+          <label for="sms-phone"><strong>Mobile Number</strong></label><br />
+          <input type="tel" id="sms-phone" name="phone" required class="form-input" />
+        </p>
+
+        <p style="margin-bottom: 12px;">
+          <label for="sms-purpose"><strong>Reason for Contact</strong></label><br />
+          <select id="sms-purpose" name="purpose" class="form-select">
+            <option value="order-updates">Order Updates</option>
+            <option value="delivery-updates">Delivery Updates</option>
+            <option value="customer-care">Customer Care</option>
+            <option value="inventory-questions">Inventory Questions</option>
+            <option value="appliance-appraisal">Appliance Appraisal</option>
+          </select>
+        </p>
+
+        <p style="margin-bottom: 12px;">
+          <label style="display: flex; gap: 10px; align-items: flex-start;">
+            <input type="checkbox" name="sms_consent" required style="margin-top: 3px;" />
+            <span>
+              I agree to receive SMS text messages from Chattanooga Discount Appliances
+              for customer care and order/delivery updates. Message frequency varies.
+              Message and data rates may apply. Reply STOP to opt out, HELP for help.
+            </span>
+          </label>
+        </p>
+
+        <p style="font-size: 13px; color: #555;">
+          Consent is not a condition of purchase. SMS opt-in data and consent will not
+          be shared with third parties.
+        </p>
+
+        <button type="submit" class="btn btn-blue" style="border: none; cursor: pointer;">
+          Submit SMS Opt-In
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <section id="sms-policy">
+    <h2>SMS & Privacy Policy</h2>
+    <p class="subtitle">Customer-initiated, consent-based messaging only.</p>
+
+    <div class="highlight">
+      <p>Chattanooga Discount Appliances uses SMS messaging strictly for customer-initiated and consent-based communication.</p>
+      <p>SMS is used only to respond to inquiries, send requested images of merchandise, confirm orders, and provide delivery scheduling updates.</p>
+      <p>We do not send unsolicited or promotional text messages.</p>
+      <p>The primary number listed on this website (<strong>423-407-0098</strong>) is used for customer inquiries and support.</p>
+      <p>Message and data rates may apply. Reply <strong>STOP</strong> to opt out. Reply <strong>HELP</strong> for assistance.</p>
+      <p><strong>Privacy Notice:</strong> SMS opt-in data and consent will not be shared with third parties.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Chattanooga Discount Appliances • 1931 Lafayette Rd, Fort Oglethorpe, GA 30742 •
+    <a href="tel:+14234070098">423-407-0098</a>
+  </footer>
+</body>
+</html>

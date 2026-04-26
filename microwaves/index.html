@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chattanooga Discount Appliances | Fort Oglethorpe, GA</title>
+    <style>
+        :root {
+            --blue: #1e73be;
+            --dark: #1b1b1b;
+            --light: #f5f5f5;
+            --accent: #f9b233;
+            --green: #33b46f;
+            --card-radius: 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: var(--light);
+            color: #222;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* HEADER & NAV */
+        header {
+            background: #ffffff;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .logo-wrap {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header img {
+            height: 64px;
+        }
+
+        header .brand-text {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 1.2;
+        }
+
+        nav {
+            display: flex;
+            gap: 18px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav a {
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover {
+            border-color: var(--blue);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            nav {
+                flex-wrap: wrap;
+            }
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--blue), #11497e);
+            color: white;
+            padding: 48px 20px 40px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin: 0 0 10px 0;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 0 0 20px 0;
+        }
+
+        .hero-sub {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 24px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 999px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        .btn-ghost {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-ghost:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .btn-blue {
+            background: var(--blue);
+            color: #fff;
+        }
+
+        .btn-blue:hover {
+            opacity: 0.9;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--blue);
+            color: var(--blue);
+            background: #fff;
+        }
+
+        .btn-outline:hover {
+            background: #e8f0ff;
+        }
+
+        /* GENERIC SECTIONS */
+        section {
+            padding: 38px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            margin-top: 0;
+            font-size: 26px;
+            color: var(--blue);
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        section .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 24px;
+        }
+
+        /* GRID / CARDS */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            border-radius: var(--card-radius);
+            border: 1px solid #e0e0e0;
+            padding: 18px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 6px;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-title {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* CARTOON ICONS */
+        .icon-circle {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .icon-washer   { background: radial-gradient(circle at 30% 30%, #ffffff 0, #a6d4ff 40%, #1e73be 100%); }
+        .icon-dryer    { background: radial-gradient(circle at 30% 30%, #ffffff 0, #ffd3a6 40%, #f38b1a 100%); }
+        .icon-fridge   { background: radial-gradient(circle at 30% 30%, #ffffff 0, #b3f0d0 40%, #33b46f 100%); }
+        .icon-stove    { background: radial-gradient(circle at 30% 30%, #ffffff 0, #ffe3b3 40%, #e67e22 100%); }
+        .icon-dish     { background: radial-gradient(circle at 30% 30%, #ffffff 0, #e1d4ff 40%, #8e44ad 100%); }
+        .icon-micro    { background: radial-gradient(circle at 30% 30%, #ffffff 0, #ffccd5 40%, #e74c3c 100%); }
+        .icon-kitchen  { background: radial-gradient(circle at 30% 30%, #ffffff 0, #c4f0ff 40%, #16a085 100%); }
+        .icon-stack    { background: radial-gradient(circle at 30% 30%, #ffffff 0, #c6dbff 40%, #355cce 100%); }
+        .icon-freezer  { background: radial-gradient(circle at 30% 30%, #ffffff 0, #d7f0ff 40%, #1990c9 100%); }
+
+        .icon-svg {
+            width: 26px;
+            height: 26px;
+        }
+
+        /* PRICING TABLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background: #f0f4fb;
+        }
+
+        /* TWO-COLUMN LAYOUTS */
+        .two-col {
+            display: grid;
+            grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        @media (max-width: 900px) {
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* HIGHLIGHT BOXES */
+        .highlight {
+            background: white;
+            border-radius: var(--card-radius);
+            border: 1px solid #e0e0e0;
+            padding: 18px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+        }
+
+        .highlight h3 {
+            margin-top: 0;
+            font-size: 18px;
+            color: var(--blue);
+        }
+
+        .highlight ul {
+            padding-left: 20px;
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        /* GALLERY IMAGES */
+        .gallery-img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+
+        /* CONTACT / FOOTER */
+        .contact-details {
+            font-size: 15px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .contact-details strong {
+            display: inline-block;
+            margin-top: 4px;
+        }
+
+        .hours {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        footer {
+            background: var(--dark);
+            color: #eee;
+            padding: 18px 20px;
+            text-align: center;
+            font-size: 13px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo-wrap">
+        <img src="cda-logo.png.webp" alt="Chattanooga Discount Appliances Logo" />
+        <div class="brand-text">
+            Chattanooga Discount Appliances<br />
+            <span style="font-size:12px; font-weight:normal;">Fort Oglethorpe, GA</span>
+        </div>
+    </div>
+    <nav>
+        <a href="#appliances">Appliances</a>
+        <a href="#sets">Washer & Dryer Sets</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#property-managers">Property Managers</a>
+        <a href="#financing">Financing</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Quality Appliances. Discount Prices. Local People.</h1>
+    <p>Washers • Dryers • Stackables • Refrigerators • Freezers • Stoves • Dishwashers • Microwaves • Kitchen Packages</p>
+    <p class="hero-sub">
+        Clean, tested appliances with a flexible <strong>90-day warranty</strong> and affordable delivery.
+    </p>
+    <div class="hero-buttons">
+        <a href="tel:17063831178" class="btn btn-primary">📞 Call Now: 706-383-1178</a>
+        <a href="#financing" class="btn btn-ghost">💳 Financing Options</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=1931+Lafayette+Rd+Fort+Oglethorpe+GA+30742" target="_blank" class="btn btn-ghost">
+            📍 Get Directions
+        </a>
+    </div>
+</section>
+
+<section id="appliances">
+    <h2>Shop Appliances</h2>
+    <p class="subtitle">Inventory changes daily — stop by or call for today’s best deals.</p>
+    <div class="grid">
+        <!-- Washer -->
+        <a href="#washers" style="text-decoration:none; color:inherit;">
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon-circle icon-washer">
+                        <svg class="icon-svg" viewBox="0 0 40 40">
+                            <rect x="6" y="6" width="28" height="28" rx="5" ry="5" fill="#fdfdfd" stroke="#2468b5" stroke-width="2"/>
+                            <rect x="8" y="8" width="24" height="6" fill="#e3f0ff"/>
+                            <circle cx="12" cy="11" r="1.3" fill="#2468b5"/>
+                            <circle cx="16" cy="11" r="1.3" fill="#f9b233"/>
+                            <circle cx="20" cy="11" r="1.3" fill="#33b46f"/>
+                            <circle cx="20" cy="23" r="9" fill="#e3f0ff" stroke="#2468b5" stroke-width="2"/>
+                            <circle cx="20" cy="23" r="6" fill="#8ecbff"/>
+                            <path d="M14 24c2 2 4-1 6 0s4 2 6 0" fill="none" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="card-title">Washers</div>
+                </div>
+                <p>Top-load & front-load units for every budget.</p>
+            </div>
+        </a>
+
+        <!-- Dryer -->
+        <a href="#dryers" style="text-decoration:none; color:inherit;">
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon-circle icon-dryer">
+                        <svg class="icon-svg" viewBox="0 0 40 40">
+                            <rect x="6" y="6" width="28" height="28" rx="5" ry="5" fill="#fff7ec" stroke="#d86c10" stroke-width="2"/>
+                            <rect x="8" y="8" width="24" height="6" fill="#ffe0bb"/>
+                            <circle cx="12" cy="11" r="1.3" fill="#d86c10"/>
+                            <circle cx="17" cy="11" r="1.3" fill="#f9b233"/>
+                            <circle cx="20" cy="23" r="9" fill="#ffe7c7" stroke="#d86c10" stroke-width="2"/>
+                            <circle cx="20" cy="23" r="6" fill="#ffd2a0"/>
+                            <path d="M15 26c1.2-2 1.8-2.5 3-3.5M19 27.5c1.2-2 1.8-2.5 3-3.5" fill="none" stroke="#ff9f43" stroke-width="1.4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="card-title">Dryers</div>
+                </div>
+                <p>Electric dryers with tested heat and performance.</p>
+            </div>
+        </a>
+
+        <!-- Stackable Combo -->
+        <a href="#stackable" style="text-decoration:none; color:inherit;">
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon-circle icon-stack">
+                        <svg class="icon-svg" viewBox="0 0 40 40">
+                            <rect x="10" y="5" width="20" height="30" rx="4" ry="4" fill="#f6f8ff" stroke="#355cce" stroke-width="2"/>
+                            <line x1="10" y1="20" x2="30" y2="20" stroke="#d8e0ff" stroke-width="2"/>
+                            <rect x="12" y="7" width="16" height="4" fill="#e1e7ff"/>
+                            <circle cx="14" cy="9" r="1.1" fill="#355cce"/>
+                            <circle cx="18" cy="9" r="1.1" fill="#f9b233"/>
+                            <circle cx="20" cy="14" r="6" fill="#e6edff" stroke="#355cce" stroke-width="1.6"/>
+                            <circle cx="20" cy="14" r="3.8" fill="#aec3ff"/>
+                            <circle cx="20" cy="26" r="6" fill="#e6edff" stroke="#355cce" stroke-width="1.6"/>
+                            <circle cx="20" cy="26" r="3.8" fill="#aec3ff"/>
+                        </svg>
+                    </div>
+                    <div class="card-title">Stackable Combo / Washer & Dryer</div>
+                </div>
+                <p>Space-saving stacked washer & dryer units for tighter laundry areas.</p>
+            </div>
+        </a>
+
+        <!-- Refrigerator -->
+        <a href="#refrigerators" style="text-decoration:none; color:inherit;">
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon-circle icon-fridge">
+                        <svg class="icon-svg" viewBox="0 0 40 40">
+                            <rect x="10" y="5" width="20" height="30" rx="4" ry="4" fill="#e5fff0" stroke="#258f55" stroke-width="2"/>
+                            <line x1="10" y1="19" x2="30" y2="19" stroke="#c4e8d3" stroke-width="2"/>
+                            <rect x="12" y="10" width="2" height="5" rx="1" fill="#258f55"/>
+                            <rect x="26" y="22" width="2" height="5" rx="1" fill="#258f55"/>
+                            <path d="M14 9c3 2 4 5 4 9s-1 7-4 9" fill="none" stroke="#ffffff" stroke-width="1.3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="card-title">Refrigerators</div>
+                </div>
+                <p>Top-freezer, bottom-freezer & side-by-side fridges.</p>
+            </div>
+        </a>
+
+        <!-- Freezers -->
+        <a href="#freezers" style="text-decoration:none; color:inherit;">
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon-circle icon-freezer">
+                        <svg class="icon-svg" viewBox="0 0 40 40">
+                            <rect x="7" y="13" width="26" height="18" rx="3" ry="3" fill="#e8f7ff" stroke="#1990c9" stroke-width="2"/>
+                            <rect x="6" y="10" width="28" height="5" rx="2" ry="2" fill="#f5fbff" stroke="#1990c9" stroke-width="1.6"/>
+                            <path d="M20 18v8M17 21h6M18 19l4 6M22 19l-4 6" stroke="#1990c9" stroke-width="1.2" stroke-linecap="round"/>
+                            <circle cx="13" cy="19" r="1" fill="#ffffff"/>
+                            <circle cx="27" cy="22" r="1" fill="#ffffff"/>
+                        </svg>
+                    </div>
+                    <div class="card-title">Freezers</div>
+                </div>
+                <p>Chest and upright freezers to keep everything ice cold.</p>
+            </div>
+        </a>
+
+        <!-- Stove / Range -->
+        <a href="#stoves" style="text-decoration:none; color:inherit;">
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon-circle icon-stove">
+                        <svg class="icon-svg" viewBox="0 0 40 40">
+                            <rect x="7" y="7" width="26" height="26" rx="4" ry="4" fill="#fff3e0" stroke="#d6711f" stroke-width="2"/>
+                            <circle cx="14" cy="13" r="3" fill="#ffffff" stroke="#d6711f" stroke-width="1.4"/>
+                            <circle cx="26" cy="13" r="3" fill="#ffffff" stroke="#d6711f" stroke-width="1.4"/>
+                            <circle cx="14" cy="19" r="2.2" fill="#ffffff" stroke="#d6711f" stroke-width="1.2"/>
+                            <circle cx="26" cy="19" r="2.2" fill="#ffffff" stroke="#d6711f" stroke-width="1.2"/>
+                            <rect x="11" y="21" width="18" height="9" rx="2" ry="2" fill="#ffe0ba" stroke="#d6711f" stroke-width="1.3"/>
+                            <rect x="13" y="23" width="14" height="5" rx="2" ry="2" fill="#ffb347" opacity="0.6"/>
+                        </svg>
+                    </div>
+                    <div class="card-title">Stoves & Ranges</div>
+                </div>
+                <p>Electric ranges and glass-top stoves ready for your kitchen.</p>
+            </div>
+        </a>
+
+        <!-- Dishwasher -->
+        <a href="#dishwashers" style="text-decoration:none; color:inherit;">
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon-circle icon-dish">
+                        <svg class="icon-svg" viewBox="0 0 40 40">
+                            <rect x="7" y="7" width="26" height="26" rx="4" ry="4" fill="#f7f2ff" stroke="#7a3bb2" stroke-width="2"/>
+                            <rect x="9" y="9" width="22" height="4" fill="#e4d7ff"/>
+                            <circle cx="12" cy="11" r="1.2" fill="#7a3bb2"/>
+                            <circle cx="16" cy="11" r="1.2" fill="#f9b233"/>
+                            <circle cx="16" cy="23" r="5" fill="#ffffff" stroke="#c4b2ff" stroke-width="1.4"/>
+                            <rect x="22" y="19" width="5" height="9" rx="2" ry="2" fill="#e4f5ff" stroke="#7a3bb2" stroke-width="1.2"/>
+                            <circle cx="14" cy="19" r="1.1" fill="#e4f5ff"/>
+                            <circle cx="19" cy="26" r="1" fill="#e4f5ff"/>
+                        </svg>
+                    </div>
+                    <div class="card-title">Dishwashers</div>
+                </div>
+                <p>Clean, tested dishwashers to make life easier.</p>
+            </div>
+        </a>
+
+        <!-- Microwave -->
+        <a href="#microwaves" style="text-decoration:none; color:inherit;">
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon-circle icon-micro">
+                        <svg class="icon-svg" viewBox="0 0 40 40">
+                            <rect x="6" y="11" width="28" height="18" rx="3" ry="3" fill="#fff0f0" stroke="#c43b30" stroke-width="2"/>
+                            <rect x="9" y="14" width="16" height="12" rx="2" ry="2" fill="#ffe0e0" stroke="#c43b30" stroke-width="1.2"/>
+                            <path d="M11 20c1.3-1.5 2.6-1.5 4 0s2.7 1.5 4 0" fill="none" stroke="#ff9f9f" stroke-width="1.4" stroke-linecap="round"/>
+                            <rect x="27" y="14" width="5" height="2" rx="1" fill="#ffc9c9"/>
+                            <rect x="27" y="17" width="5" height="2" rx="1" fill="#ffc9c9"/>
+                            <rect x="27" y="20" width="5" height="2" rx="1" fill="#ffc9c9"/>
+                            <rect x="27" y="23" width="5" height="2" rx="1" fill="#ffc9c9"/>
+                        </svg>
+                    </div>
+                    <div class="card-title">Microwaves</div>
+                </div>
+                <p>Over-the-range units to finish out your kitchen.</p>
+            </div>
+        </a>
+
+        <!-- Kitchen packages -->
+        <a href="#kitchen-packages" style="text-decoration:none; color:inherit;">
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon-circle icon-kitchen">
+                        <svg class="icon-svg" viewBox="0 0 40 40">
+                            <path d="M8 20L20 8l12 12v10a3 3 0 0 1-3 3H11a3 3 0 0 1-3-3Z" fill="#e7fff8" stroke="#10806a" stroke-width="2"/>
+                            <rect x="12" y="20" width="6" height="10" rx="1.5" fill="#c8f4ff"/>
+                            <rect x="19" y="22" width="9" height="8" rx="1.8" fill="#ffe8c4"/>
+                            <circle cx="21.5" cy="24" r="1.4" fill="#ffffff"/>
+                            <circle cx="25.5" cy="24" r="1.4" fill="#ffffff"/>
+                            <path d="M14 15l6-5 6 5" fill="none" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="card-title">Kitchen Packages</div>
+                </div>
+                <p>Bundle multiple appliances and save on your upgrade.</p>
+            </div>
+        </a>
+
+        <!-- Washer & Dryer Sets card scrolling to #sets -->
+        <a href="#sets" style="text-decoration:none; color:inherit;">
+            <div class="card">
+                <div class="card-header">
+                    <div class="icon-circle icon-washer">
+                        <svg class="icon-svg" viewBox="0 0 40 40">
+                            <rect x="6" y="6" width="28" height="28" rx="5" ry="5" fill="#fdfdfd" stroke="#2468b5" stroke-width="2"/>
+                            <rect x="8" y="8" width="24" height="6" fill="#e3f0ff"/>
+                            <circle cx="12" cy="11" r="1.3" fill="#2468b5"/>
+                            <circle cx="16" cy="11" r="1.3" fill="#f9b233"/>
+                            <circle cx="20" cy="11" r="1.3" fill="#33b46f"/>
+                            <circle cx="20" cy="23" r="9" fill="#e3f0ff" stroke="#2468b5" stroke-width="2"/>
+                            <circle cx="20" cy="23" r="6" fill="#8ecbff"/>
+                        </svg>
+                    </div>
+                    <div class="card-title">Washer & Dryer Sets</div>
+                </div>
+                <p>Matched sets ready for same-day pickup or delivery.</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- NEW: Washer & Dryer Sets GALLERY -->
+<section id="sets">
+    <h2>Washer & Dryer Sets</h2>
+    <p class="subtitle">Matched sets ready for same-day pickup or delivery.</p>
+    <div class="grid">
+        <div class="card">
+            <img src="images/washer-dryer-sets/set1.jpg" alt="Washer and Dryer Set 1" class="gallery-img">
+            <div class="card-title">Washer & Dryer Set #1</div>
+            <p>Clean, tested set at a great price.</p>
+        </div>
+        <div class="card">
+            <img src="images/washer-dryer-sets/set2.jpg" alt="Washer and Dryer Set 2" class="gallery-img">
+            <div class="card-title">Washer & Dryer Set #2</div>
+            <p>Perfect everyday laundry combo for most homes.</p>
+        </div>
+        <div class="card">
+            <img src="images/washer-dryer-sets/stacked.jpg" alt="Stackable Washer and Dryer" class="gallery-img">
+            <div class="card-title">Stackable Laundry Center</div>
+            <p>Great for apartments, closets, and tight spaces.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PER-CATEGORY SCROLL TARGET SECTIONS (text for now; you can add images later) -->
+
+<section id="washers">
+    <h2>Washers</h2>
+    <p class="subtitle">Top-load and front-load washers for every budget.</p>
+    <div class="highlight">
+        <p>Call for current inventory and pricing on individual washer models. Inventory changes daily.</p>
+    </div>
+</section>
+
+<section id="dryers">
+    <h2>Dryers</h2>
+    <p class="subtitle">Electric dryers tested for proper heat and performance.</p>
+    <div class="highlight">
+        <p>We stock a rotating selection of electric dryers. Call for today’s options and package deals.</p>
+    </div>
+</section>
+
+<section id="stackable">
+    <h2>Stackable Washer & Dryer Combos</h2>
+    <p class="subtitle">Space-saving units perfect for tight laundry areas.</p>
+    <div class="highlight">
+        <p>Ask about stackable laundry centers and matched front-load stackable sets.</p>
+    </div>
+</section>
+
+<section id="refrigerators">
+    <h2>Refrigerators</h2>
+    <p class="subtitle">Top-freezer, bottom-freezer, and side-by-side fridges.</p>
+    <div class="highlight">
+        <p>We carry a mix of sizes and styles. Visit the store or call for what’s currently on the floor.</p>
+    </div>
+</section>
+
+<section id="freezers">
+    <h2>Freezers</h2>
+    <p class="subtitle">Chest and upright freezers to keep everything cold.</p>
+    <div class="highlight">
+        <p>Perfect for hunters, meal preppers, and larger families. Call for in-stock sizes.</p>
+    </div>
+</section>
+
+<section id="stoves">
+    <h2>Stoves & Ranges</h2>
+    <p class="subtitle">Electric ranges and glass-top stoves.</p>
+    <div class="highlight">
+        <p>We offer clean, tested stoves ready to plug in and cook. Ask about package pricing with refrigerators and dishwashers.</p>
+    </div>
+</section>
+
+<section id="dishwashers">
+    <h2>Dishwashers</h2>
+    <p class="subtitle">Clean, tested dishwashers to make life easier.</p>
+    <div class="highlight">
+        <p>Inventory varies. We often have basic, stainless, and higher-end models available.</p>
+    </div>
+</section>
+
+<section id="microwaves">
+    <h2>Microwaves</h2>
+    <p class="subtitle">Over-the-range microwaves to complete your kitchen.</p>
+    <div class="highlight">
+        <p>Ask about color-matched microwaves to go with your stove and refrigerator.</p>
+    </div>
+</section>
+
+<section id="kitchen-packages">
+    <h2>Kitchen Packages</h2>
+    <p class="subtitle">Bundle multiple appliances and save.</p>
+    <div class="highlight">
+        <p>We can help you put together a fridge, stove, dishwasher, and microwave package at a discounted bundle price.</p>
+    </div>
+</section>
+
+<section id="why-us">
+    <h2>Why Chattanooga Discount Appliances?</h2>
+    <p class="subtitle">We’re a local shop focused on value, honesty, and getting you taken care of fast.</p>
+    <div class="grid">
+        <div class="card">
+            <div class="card-title">Local & Family-Focused</div>
+            <p>We live and work right here in the Chattanooga / North Georgia area. No big-box runaround.</p>
+        </div>
+        <div class="card">
+            <div class="card-title">Cleaned & Tested</div>
+            <p>Units are checked, cleaned, and tested so you know what you’re getting before it hits your home.</p>
+        </div>
+        <div class="card">
+            <div class="card-title">90-Day Warranty</div>
+            <p>Flexible 90-day warranty on most used appliances, with real people you can call if something comes up.</p>
+        </div>
+        <div class="card">
+            <div class="card-title">Delivery, Setup & Haul-Away</div>
+            <p>We can deliver, install, and haul away your old unit starting at just <strong>$89</strong>.</p>
+        </div>
+    </div>
+</section>
+
+<section id="property-managers">
+    <h2>Property Manager & Landlord Programs</h2>
+    <p class="subtitle">Fast turnaround, simple pricing, and reliable appliances for your rentals.</p>
+    <div class="two-col">
+        <div class="highlight">
+            <h3>Standard White / Black / Bisque Pricing</h3>
+            <table>
+                <tr>
+                    <th>Appliance Type</th>
+                    <th>Standard Pricing</th>
+                </tr>
+                <tr>
+                    <td>Top & Bottom Refrigerators</td>
+                    <td>$299.99</td>
+                </tr>
+                <tr>
+                    <td>Washers</td>
+                    <td>$199.00</td>
+                </tr>
+                <tr>
+                    <td>Dryers</td>
+                    <td>$199.00</td>
+                </tr>
+                <tr>
+                    <td>Microwaves</td>
+                    <td>$199.00</td>
+                </tr>
+                <tr>
+                    <td>Dishwashers</td>
+                    <td>$199.00</td>
+                </tr>
+                <tr>
+                    <td>Side-by-Side Refrigerators</td>
+                    <td>$399.00</td>
+                </tr>
+            </table>
+            <p style="font-size:13px; margin-top:8px;">
+                Stainless packages and special requests are quoted per piece.
+            </p>
+        </div>
+        <div class="highlight">
+            <h3>Turnkey Service</h3>
+            <ul>
+                <li>Bulk appliance purchases for multi-unit properties.</li>
+                <li>Delivery & setup available starting at <strong>$89</strong>.</li>
+                <li>90-day warranty with flexible solutions if issues arise.</li>
+                <li>Great option for landlords, flippers, and property managers.</li>
+            </ul>
+            <p style="font-size:13px;">
+                Call us at <strong>706-383-1178</strong> to set up a property manager account or discuss volume needs.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="financing">
+    <h2>Financing & Payment Options</h2>
+    <p class="subtitle">Need a little help getting the appliances you want today? We’ve got options.</p>
+    <div class="two-col">
+        <div class="highlight">
+            <h3>No-Credit-Check Financing</h3>
+            <ul>
+                <li>Easy approval process — perfect for rebuilding or limited credit.</li>
+                <li>Great for full kitchen packages, washer/dryer sets, and more.</li>
+                <li>Apply online in minutes with American First Finance.</li>
+            </ul>
+            <p style="margin-top:12px; text-align:center;">
+                <a href="https://dp.americanfirstfinance.com/#/application"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn btn-blue">
+                    Apply Now – No Credit Check
+                </a>
+            </p>
+        </div>
+        <div class="highlight">
+            <h3>Standard Financing (Intuit)</h3>
+            <ul>
+                <li>Flexible financing through Intuit for qualifying customers.</li>
+                <li>Ideal for larger purchases or full remodel projects.</li>
+                <li>Review terms and submit your application online.</li>
+            </ul>
+            <p style="margin-top:12px; text-align:center;">
+                <a href="https://financing.app.intuit.com/home?token=Y29tcGFueUlkPTkzNDE0NTU0MDMwNzM0NjQ="
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn btn-outline">
+                    Apply for Financing
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div class="highlight" style="margin-top:20px;">
+        <h3>Credit & Payment Methods</h3>
+        <ul>
+            <li>Major credit cards accepted <strong>with a 4% fee</strong>.</li>
+            <li>Cash and debit also accepted.</li>
+            <li>Simple, straightforward pricing — no hidden nonsense.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="delivery">
+    <h2>Delivery, Setup & Haul-Away</h2>
+    <p class="subtitle">Let our team handle the heavy lifting so you don’t have to.</p>
+    <div class="highlight">
+        <h3 style="margin-top:0;">How It Works</h3>
+        <ul>
+            <li><strong>$89</strong> for delivery, basic setup, and haul-away of the old unit (within our normal service area).</li>
+            <li>We’ll schedule a delivery window and keep you updated on timing.</li>
+            <li>Old appliances can be hauled away for recycling or disposal.</li>
+            <li>Ask about multi-piece delivery options for full kitchen or laundry packages.</li>
+        </ul>
+        <p style="font-size:13px;">
+            Service area, stairs, or special installs may affect final delivery pricing — call for details.
+        </p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Visit or Contact Us</h2>
+    <p class="subtitle">Call, message, or stop by — we’re happy to help you find the right appliance.</p>
+    <div class="contact-details">
+        <strong>Chattanooga Discount Appliances</strong><br />
+        1931 Lafayette Rd<br />
+        Fort Oglethorpe, GA 30742<br /><br />
+
+        <strong>Primary Phone:</strong> <a href="tel:17063831178">706-383-1178</a><br />
+        <strong>Secondary Phone:</strong> <a href="tel:14237796313">423-779-6313</a><br />
+        <strong>Email:</strong> <a href="mailto:Sales@ChattanoogaDiscountAppliances.com">Sales@ChattanoogaDiscountAppliances.com</a>
+
+        <div class="hours">
+            <br /><strong>Store Hours</strong><br />
+            Monday–Friday: 10:00am – 5:00pm<br />
+            Saturday: 9:00am – 3:00pm<br />
+            Sunday: Closed
+        </div>
+
+        <p style="margin-top:10px;">
+            <a href="https://www.google.com/maps/search/?api=1&query=1931+Lafayette+Rd+Fort+Oglethorpe+GA+30742" target="_blank">
+                📍 Open in Google Maps
+            </a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2025 Chattanooga Discount Appliances • 1931 Lafayette Rd, Fort Oglethorpe, GA 30742 •
+    <a href="tel:17063831178">706-383-1178</a>
+</footer>
+
+</body>
+</html>
